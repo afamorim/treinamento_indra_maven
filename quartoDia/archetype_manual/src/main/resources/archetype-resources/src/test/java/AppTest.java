@@ -1,4 +1,3 @@
-package es.indra.treinamento.maven.terceiroDia;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -31,20 +30,8 @@ public class AppTest
     /**
      * Rigourous Test :-)
      */
-    public void testVerdadeApp()
+    public void testApp()
     {
-    	App app = new App();
-    	if (app.validaTeste(true).equals("TESTE VALIDADO"))
-    		assertTrue( true );
-    	else
-    		assertFalse(false);
-    }
-    
-    public void testeMentiraApp(){
-    	App app = new App();
-    	if (app.validaTeste(false).equals("TESTE NÃO VALIDADO"))
-    		assertTrue( true );
-    	else
-    		assertFalse(false);
+        assertTrue( true );
     }
 }

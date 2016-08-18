@@ -6,8 +6,12 @@ package es.indra.treinamento.maven.terceiroDia;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    public String validaTeste(boolean verdade){
+    	if (verdade){
+    		return "TESTE VALIDADO";
+    	}else if (!verdade){
+    		return "TESTE NÃO VALIDADO";
+    	}
+    	return "RETORNO IMPOSSIVEL";
     }
 }

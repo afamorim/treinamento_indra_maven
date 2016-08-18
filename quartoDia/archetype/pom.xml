@@ -1,11 +1,45 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-        http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>es.indra.treinamento.maven.quartoDia</groupId>
-    <artifactId>web-prime</artifactId>
-    <version>1.0</version>
-    <packaging>jar</packaging>
-</project>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
+  <groupId>es.indra.treinamento.maven.terceiroDia</groupId>
+  <artifactId>exemplo-web-archetype</artifactId>
+  <version>1.0</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>exemplo-web-archetype</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>2.4</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>2.4</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <url>http://maven.apache.org</url>
+
+  <distributionManagement>
+    <repository>
+      <id>Vortice</id>
+      <name>Internal Releases</name>
+      <url>http://45.55.39.27/nexus/content/repositories/Vortice</url>
+    </repository>
+    <snapshotRepository>
+      <id>Snapshots</id>
+      <name>Internal Snapshots</name>
+      <url>http://45.55.39.27/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>
