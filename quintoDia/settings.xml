@@ -1,0 +1,170 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<servers>
+
+		<server>
+			<id>BasicGroup</id>
+			<username>antonio.amorim</username>
+			<password>{qMpMIje/kaAHkT5KcdDFp4u0ImAxv7UbnSFyJUbo0Cw=}</password>
+		</server>
+	
+		<server>
+			<id>Vortice</id>
+			<username>antonio.amorim</username>
+			<password>{qMpMIje/kaAHkT5KcdDFp4u0ImAxv7UbnSFyJUbo0Cw=}</password>
+		</server>
+	
+		<server>
+			<id>eLaudos</id>
+			<username>antonio.amorim</username>
+			<password>{qMpMIje/kaAHkT5KcdDFp4u0ImAxv7UbnSFyJUbo0Cw=}</password>
+		</server>
+
+		<server>
+			<id>Snapshots</id>
+			<username>antonio.amorim</username>
+			<password>{qMpMIje/kaAHkT5KcdDFp4u0ImAxv7UbnSFyJUbo0Cw=}</password>
+		</server>
+
+		<server>
+			<id>JuriWeb</id>
+			<username>antonio.amorim</username>
+			<password>{qMpMIje/kaAHkT5KcdDFp4u0ImAxv7UbnSFyJUbo0Cw=}</password>
+		</server>
+
+		<server>
+	      <id>InformacoesGerenciaisroup</id>
+	      <username>antonio.amorim</username>
+	      <password>{qMpMIje/kaAHkT5KcdDFp4u0ImAxv7UbnSFyJUbo0Cw=}</password>
+	    </server>
+
+	    <server>
+	    	<id>maven.oracle.com</id>
+	    	<username>afamorim@gmail.com</username>
+	    	<password>{yLgCNpvMAu8HcZywdA+YHa2MFe3z7bcehu4uz1x5/ec=}</password>
+	    	<configuration>
+				<basicAuthScope>
+					<host>ANY</host>
+					<port>ANY</port>
+					<realm>OAM 11g</realm>
+				</basicAuthScope>
+				<httpConfiguration>
+					<all>
+						<params>
+							<property>
+								<name>http.protocol.allow-circular-redirects</name>
+								<value>%b,true</value>
+							</property>
+						</params>
+					</all>
+				</httpConfiguration>
+			</configuration>
+	    </server>
+	</servers>
+
+	<profiles>
+
+		<profile>
+			<id>Oracle</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+
+				<repository>
+					<id>maven.oracle.com</id>
+					<releases>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+						<updatePolicy>never</updatePolicy>
+					</snapshots>
+					<url>https://maven.oracle.com</url>
+					<layout>default</layout>
+				</repository>
+			</repositories>
+
+			<pluginRepositories>
+				<pluginRepository>
+					<id>maven.oracle.com</id>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<url>https://maven.oracle.com</url>
+					<layout>default</layout>
+				</pluginRepository>
+			</pluginRepositories>
+	    </profile>
+		
+		<!--profile>
+			<id>maven.oracle.com</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>maven.oracle.com</id>
+					<url>https://maven.oracle.com</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+				</repository>
+			</repositories>
+	    </profile-->
+
+		<profile>
+			<id>BasicGroup</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>BasicGroup</id>
+					<url>
+						http://45.55.39.27/nexus/content/groups/BasicGroup/
+					</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>BasicGroup</id>
+					<url>
+						http://45.55.39.27/nexus/content/groups/BasicGroup/
+					</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+
+			<properties>
+				<user.outputdirectory.elaudos>/Users/antonio.amorim/desenvolvimento/servidores/apache-tomcat-7.0.40/webapps</user.outputdirectory.elaudos>
+				<user.outputdirectory.thesearch>/Users/antonio.amorim/desenvolvimento/servidores/apache-tomcat-7.0.40/webapps</user.outputdirectory.thesearch>
+				<user.outputdirectory.tomcat>/Users/antonio.amorim/desenvolvimento/servidores/apache-tomcat-7.0.40/webapps</user.outputdirectory.tomcat>
+				<user.outputdirectory.tomcat.install>/Users/antonio.amorim/desenvolvimento/servidores/apache-tomcat-7.0.40</user.outputdirectory.tomcat.install>
+				<user.url.postgresql>jdbc:postgresql://192.168.99.100:32769/tdlaudos</user.url.postgresql>
+			</properties>
+		</profile>
+
+		
+	</profiles>
+
+	<activeProfiles>
+		<activeProfile>BasicGroup</activeProfile>
+	</activeProfiles>
+</settings>

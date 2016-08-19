@@ -10,6 +10,7 @@
 	
   
 	<modules>
+		<module>exemplo-parent</module>
 		<module>exemplo-core</module>
 		<module>exemplo-web</module>
   	</modules>
